@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        main {
+            flex: 3;
+            padding: 1rem;
+        }
+
+        aside {
+            flex: 1;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            border-left: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eggy Car Unblocked Game</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <h2>Welcome to Eggy Car</h2>
+           <iframe src="https://webglmath.github.io/eggy-car/" width="1200" height="500" style=""><span data-mce-type="bookmark" style="display: inline-block; width: 800px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+</iframe>
+            <p>Eggy Car is a driving game where you drive a vehicle on the hills and balance an egg carefully on the vehicle, collect stars coins, and upgrade your vehicles.</p>
+            <button id="changeColorButton">Change Background Color</button>
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>This is the sidebar content.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 Eggy Car</p>
+    </footer>
+    <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
